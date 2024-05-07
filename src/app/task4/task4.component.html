@@ -1,0 +1,9 @@
+<p>task4 works!</p>
+<h4>Set image to div on click button</h4>
+<div class="card">
+    <button (click)="onClick()">Click</button><br><br>
+    <div *ngIf="imgUrl!=null">
+     <img [src]="imgUrl" alt="Dugga">
+    </div>
+
+</div>

@@ -1,0 +1,19 @@
+th{
+    list-style:none ;
+    color: yellow;
+    background-color: purple;
+}
+
+th,tr,td{
+    border: 1px solid;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 2px;
+}
+table{
+    border-collapse: collapse;
+}
+.highlight{
+    background-color: green;
+    color: white;
+}

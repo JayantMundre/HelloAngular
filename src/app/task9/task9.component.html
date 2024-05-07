@@ -1,0 +1,8 @@
+<h1>task9 works!</h1>
+<h4>Change the width of input box when user enter the nuber in input box</h4>
+<div class="card">
+    <input [(ngModel)]="inputsize" [size]="inputsize" type="text" placeholder="Enter Width">
+</div><br><br>
+<div class="card">
+    <input (keyup)="onKeyUp($event)" [size]="inputsize" type="text" placeholder="Enter Width"> 
+</div>

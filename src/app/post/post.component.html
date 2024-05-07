@@ -1,0 +1,64 @@
+<p>post works!</p>
+<label for="" >Title::&nbsp;&nbsp;</label> 
+<input #inputtitle type="text" placeholder="Enter the title"><br><br>
+<label for="" >Body::&nbsp;&nbsp;</label> 
+<input #inputbody type="text" placeholder="Enter the Body"><br><br>
+<button (click)="onSend(inputtitle.value,inputbody.value)">Send</button>
+<button (click)="getPost()">Fetch</button>
+<hr>
+<div [hidden]="isHidden">
+    <label for="" >ID::&nbsp;&nbsp;</label> 
+<input [(ngModel)]="id" type="text" placeholder="Enter the id"readonly><br><br>
+    <label for="" >Title::&nbsp;&nbsp;</label> 
+<input [(ngModel)]="title" type="text" placeholder="Enter the title"><br><br>
+<label for="" >Body::&nbsp;&nbsp;</label> 
+<input [(ngModel)]="body" type="text" placeholder="Enter the Body"><br><br>
+<button (click)="onUpdate()">Update</button>
+<hr>
+
+</div>
+<hr>
+<table table-striped >
+    <thead>
+        <th>ID</th>
+        <th>Action</th>
+        <th>Tittle</th>
+        <th>Body</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of Posts">
+            <td>{{item.id}}</td>
+            <td><button id="x" (click)="onEdit(item)">Edit</button>
+           <!-- <div class="x"> -->
+             <button id="main" (click)="onDelete(item.id)">Delete</button></td>
+            
+            <td>{{item.title}}</td>
+            <td>{{item.body}}</td>
+        </tr>
+    </tbody>
+</table>
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2 col-md-4 col-lg-6">
+<table class=" table-bordered table-hover">
+    <thead>
+        <th>ProductId</th>
+        <th>Action</th>
+        <th>ProductName</th>
+        <th>QTY</th>
+        <th>Price</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of Posts">
+            <td>{{item.productId}}</td>
+             <td><button id="x" (click)="onEdit(item)">Edit</button>
+           <td>{{item.productName}}</td>
+            <td>{{item.productQty}}</td>
+            <td>{{item.productPrice}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>
+</div>

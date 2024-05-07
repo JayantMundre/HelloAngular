@@ -1,0 +1,27 @@
+<p>parent2 works!</p>
+<h3>{{strdataReceved}}</h3>
+
+<table>
+    <thead>
+        <th>Sr.No</th>
+        <th>Product Name</th>
+        <th>Product Price</th>
+        <th>Product QTY</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of arryofobjReceved;index as i">
+            <td>{{i+1}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.qty}}</td>
+        </tr>
+    </tbody>
+</table><hr>
+<h1>Data from backend</h1>
+<h3>{{msgdataReceved}}</h3>
+
+
+<app-child2 (childcustomevent)="strdataReceved=$event"
+ (childarrayevent)="arryofobjReceved=$event"
+ (msgevent)="msgdataReceved=$event"></app-child2>
+

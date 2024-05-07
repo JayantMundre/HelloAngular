@@ -1,0 +1,34 @@
+video,img{
+    width: 150px;
+    /* display: block;
+    text-align: center; */
+    margin: auto;
+    border-radius: 50%;
+    
+}
+input{
+    background-color: pink;
+    border-radius: 8px;
+    display: block;
+    margin: auto;
+}
+button{
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+    width: 200px;
+    
+}
+h4,small{
+    color: blue;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+div button{
+    background-color: green;
+    width: 200px;
+    height: 30px;
+}

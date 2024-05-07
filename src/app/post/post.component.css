@@ -1,0 +1,22 @@
+tr,th,td{
+    border: 1px solid;
+}
+table{
+    border-collapse: collapse;
+ }
+input{
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+}
+button{
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+}
+#main{
+    background-color: red;
+}
+#x{
+    background-color: orange;
+}

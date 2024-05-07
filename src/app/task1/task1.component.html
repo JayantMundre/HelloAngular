@@ -1,0 +1,23 @@
+<p>task1 works!</p>
+<p>task1 works!</p>
+<a routerLink="/Login">Login</a>
+<h4> change background color and text color of div tag text using click event</h4>
+<div class="card">
+    &nbsp;
+    <div class="container" #divname>.......HAPPY DIWALI......</div>
+    <br>
+    &nbsp;&nbsp;&nbsp;
+    <button (click)="onClick(divname)">click</button>
+    </div>
+    <hr>
+    <div Class="card">
+        <div Class="container"
+            [ngStyle]="{'background':isChanged==true?'pink':'',
+            'color':isChanged==true?'white':'black'
+        }"
+            >
+            .......Happy Diwali......
+        </div><br><br>
+        <button (click)="onClick1()">click</button>
+  
+</div>

@@ -1,0 +1,30 @@
+<p>home works!</p>
+<a routerLink="/Page1">PAGE1</a>
+<a routerLink="/Page2">PAGE2</a>
+<a [routerLink]="['/Page3',myid,username]">PAGE3</a>
+<a [routerLink]="['/Follower',myid]">Follower</a>
+<a routerLink="/MyFollower">MyFollower</a>
+<a routerLink="/QueryParameter" [queryParams]="jsonObj">QueryParameter</a>
+<hr>
+<a routerLink="/user">User</a>
+<router-outlet></router-outlet>
+<hr>
+<h4>Validate the login page</h4>
+
+<div class="card">
+    <h3>Login Jayant</h3>
+    <input [(ngModel)]="username1" type="text" name="username" placeholder="username"required>
+    <input [(ngModel)]="password" type="password" name="password" placeholder="password" required>
+    <button (click)="onLogin()">Login karo</button>
+</div>
+<p>{{username1}}</p>
+<p>{{password}}</p>
+<hr>Login
+<h2>For Dynamic Binding</h2>
+
+<button (click)="onPage1()">Page1</button>
+<button (click)="onPage2()">Page2</button>
+<button (click)="onPage3()">Page3</button>
+<button (click)="onFollower()">Follower</button>
+<button (click)="onMyFollower()">MyFollower</button>
+<button (click)="onQueryParameter()">QueryParameter</button>

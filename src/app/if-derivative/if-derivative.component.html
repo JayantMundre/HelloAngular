@@ -1,0 +1,11 @@
+<p>if-derivative works!</p>
+<!-- <div *ngIf="rating>4"
+    >Condition is True</div> -->
+    <p>If you wannt to add else then but not recomended</p>
+<hr>
+<div *ngIf="rating>4;else kuchbhiname"
+    >Condition is True</div>
+    <ng-template #kuchbhiname>
+        <h2>Condition is false</h2>
+
+    </ng-template>

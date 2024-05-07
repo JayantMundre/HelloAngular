@@ -1,0 +1,20 @@
+<p>task7 works!</p>
+<h4>Validate the login page</h4>
+
+<div class="card">
+    <h3>Login Jayant</h3>
+    <input [(ngModel)]="username" type="text" name="username" placeholder="username"required>
+    <input [(ngModel)]="password" type="password" name="password" placeholder="password">
+    <button (click)="onLogin()">Login</button>
+</div>
+<hr>
+<h3>Check given number is even or odd</h3>
+<div class="card">
+    <input (keyup)="onShow()" [(ngModel)]="inputnumber" type="number" placeholder="Number">
+    <br><br>
+    <div [hidden]="answer">
+    <div *ngIf="inputnumber%2==0;else xyz">Number is even</div>
+    <ng-template #xyz>Number is odd</ng-template>
+</div>
+</div>
+

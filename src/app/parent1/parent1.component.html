@@ -1,0 +1,8 @@
+<p>parent1 works!</p>
+ <!-- <input  (keyup.enter)="addHeros($event)"/> -->
+ <input #inputdate type="date" ><br><br>
+ <button (click)="onClick(inputdate.value)">Date</button><br>
+<app-child1 [parentdta]="childproperty" 
+[parentjson]="jsonObj" 
+[list]="herolist" [datedata]="datedata"
+></app-child1>

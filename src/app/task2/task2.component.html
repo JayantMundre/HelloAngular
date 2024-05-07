@@ -1,0 +1,20 @@
+
+<p>task2 works!</p>
+<h4>Calculate Cube and squre of given no using Click Event</h4>
+
+<div class="card">
+    <div class="container">
+        Number &nbsp;
+        <input (keyup)="onKeyUp()" #inputnumber type="number" placeholder= "Enter the number">
+        <br><br>
+
+        <label for="cube">Cube</label>&nbsp;
+        <input (click)="onClickcube(inputnumber.value)" type= "radio" name= "calculate"> &nbsp;
+        <input [value]="result" type="number" placeholder="Cube">
+        <br><br>
+
+        <label for="Square">Square</label>
+        <input (click)="onClicksquare(inputnumber.value)" type= "radio" name= "calculate" >&nbsp;
+        <!-- <input [value]="square" type="number" placeholder="Square"> -->
+        </div>
+        </div>

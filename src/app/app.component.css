@@ -1,0 +1,14 @@
+img,video,small{
+    color: rgb(0, 255, 98);
+    width: 300px;
+    margin: auto;
+    border-radius: 50%;
+    text-align: center;
+    
+}
+h1{
+    color: blue;
+}
+h2{
+    color: crimson;
+}

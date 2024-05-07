@@ -1,0 +1,16 @@
+
+<p>task3 works!</p>
+<h4>Apply Class Binding to Button,when button on click to change text style to italic & text color should be change.</h4>
+
+<div>
+    <button [class]="changeStyle" (click)="onClick()">change Style</button>
+</div>
+<hr>
+
+<div>
+    <button [ngClass]="{
+        'basicbtn':true,
+        'changeStyle':isChangeStyle
+    }" (click)="onClick1()">change Style</button>
+</div>
+

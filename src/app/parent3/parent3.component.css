@@ -1,0 +1,21 @@
+.highlight{
+    background-color: green;
+    color: white;
+}
+.btndiv{
+    margin: 10px;
+    padding: 5px;
+}
+.btndiv button{
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+    border-radius: 5px;
+}
+.childdiv{
+    margin: 10px;
+    padding: 5px; 
+}
+.maindiv{
+    display: flex;
+}

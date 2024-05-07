@@ -1,0 +1,9 @@
+th,tr,td{
+    border: 1px solid;
+}
+button{
+    color: white;
+    background-color: green;
+    border-radius: 5px;
+    text-align: center;
+}

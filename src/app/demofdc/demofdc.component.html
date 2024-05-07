@@ -1,0 +1,80 @@
+<p>demofdc works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col">
+
+            <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+                {{f.value|json}}
+            <div class="mb-3 mt-2">
+                <label for="">Username ::</label>
+                <input ngModel name="myusername" type="text" 
+                #myusername="ngModel" required minlength="5" pattern="admin"
+                placeholder="Enter Username" class="form-control">
+
+         
+                <div class="alert alert-danger" *ngIf="myusername.touched && myusername.invalid">
+                    ***Please Enter the Username....
+                </div>
+                <div class="alert alert-info"  *ngIf="myusername.errors?.minlength">
+                    ****Min charecter of myusername is{{myusername.errors?.minlength.requiredLength}}
+
+                </div>
+                <div class="alert alert-info"  *ngIf="myusername.errors?.pattern">
+                    ****MyUserName is not appropriate please enter proper Myusername
+                </div>
+                <div class="mt-2 mb-3">
+                    <label for="">Comment::</label>
+                    <textarea ngModel name="comment" type="text" placeholder="Enter comment" 
+                    #comment="ngModel" id="" cols="30" rows="5"
+                    class="form-control" required>
+
+                    </textarea>
+                    <div class="alert alert-danger" *ngIf="comment.touched && comment.invalid">
+                        ***please Enter the comment***
+                    </div>
+
+                </div>
+            </div><br>
+            <div class="checkbox">
+                <label for="check1"><input type="checkbox" ngModel name="mail"
+                    id="check1" #mail="ngModel"required>
+                    I agree all the terms and conditions</label>
+            </div><br>
+            <div class="radio">
+                <label for="check2">
+                    <input type="radio" ngModel name="con"
+                    id="check2" #contact="ngModel" value="email" required>
+                    Email</label>
+                     </div>
+                     <br>
+                     <div class="mt-2 mb-3" >
+                        <label for="country">Country::</label>
+                        <select ngModel name="country" id="country"
+                         required>
+                        <!-- <option *ngFor="let item of country" [value]="item.cid">{{item.cname}}
+                        </option><br> -->
+                        <!-- <option value=""selected>Please Select</option> -->
+                        <option *ngFor="let item of country" [ngValue]="item">{{item.cname}}
+                        </option><br>
+                        </select>
+                             </div><br>
+                             <div class="mt-2 mb-1" >
+                                <label for="myemail">Email Id</label>
+                                <input ngModel name="email" id="country"
+                                #email="ngModel" id="myemail" type="email" placeholder="Enter email Id"
+                                [pattern]="Email_Pattern" required>
+
+                                <div class="alert alert-danger" 
+                                *ngIf="email.touched && email.invalid">Please Enter The Email Id
+                                <div *ngIf="email.errors?.pattern">
+                             ***Please Enter the appropriate Email Id
+                                </div>
+
+                                </div>
+                             </div>
+                     <button [disabled]="f.invalid" class="btn btn-outline-success">Submit</button>
+        </form>
+        </div>
+
+    </div>
+</div>
